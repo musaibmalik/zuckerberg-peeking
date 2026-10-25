@@ -1,16 +1,9 @@
-# Peeking animation demo
+# Mark Zuckerberg peeking
 
-A blank white page using the public widget embedded in https://liquid-glass.ybouane.com/.
+A blank white page. Mark Zuckerberg slides in from the right edge, looks around, and ducks back out.
 
-Character animation and widget: ybouane, https://peeking.ybouane.com/.
-The script and both transparent video formats are served locally. Video bytes are preserved from the original source without re-encoding. WebM (VP9) is used in Chromium, with HEVC alpha for Safari.
-
-Quality changes: render all canvas surfaces at the source video's 890 x 1340 resolution, use high-quality image smoothing, remove the original canvas DPI cap, and increase the responsive character size. Original footage is 30 fps; no additional source detail or interpolated frames are claimed.
-
-The initial appearance starts after 1.2 seconds. The character repeats idle peeks and responds to hover/tap. Analytics are disabled. Automatic animation is disabled when reduced motion is requested.
+The page keeps the peeking widget from https://peeking.ybouane.com/. The character footage is replaced: two illustrated portraits, cut out, and animated as an 8 second transparent WebM at the original 890 x 1340 frame size. The old sign-tracking overlay is turned off because this character does not hold a sign.
 
 Preview: `python3 -m http.server 8766 --directory dist`.
 
-Live demo: https://peeking-blank-demo.mosesmuse.chatgpt.site/ (private, requires owner sign-in).
-
-No build step or dependencies are required. Serve the `dist/` directory with any static web server. The `.openai/hosting.json` file identifies the existing Sites deployment.
+No build step. Serve the `dist/` directory. The `.openai/hosting.json` file identifies the existing Sites deployment.

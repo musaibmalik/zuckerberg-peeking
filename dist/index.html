@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A blank page with the original peeking character animation by ybouane.">
-  <title>Peeking Animation</title>
+  <meta name="description" content="A blank page where Mark Zuckerberg peeks in from the edge.">
+  <title>Mark Zuckerberg Peeking</title>
   <link rel="preload" href="/assets/peeking-widget.js" as="script">
   <link rel="icon" href="data:,">
   <style>
@@ -18,23 +18,23 @@
   </style>
 </head>
 <body>
-  <main aria-label="Blank canvas with a peeking character"></main>
-  <!-- Original animation and widget by ybouane. This local copy renders at
-       the source video's full 890 x 1340 resolution without transcoding. -->
+  <main aria-label="Blank canvas with Mark Zuckerberg peeking in"></main>
+  <!-- Same peeking widget, with the character redrawn as Mark Zuckerberg.
+       Original widget by ybouane, https://peeking.ybouane.com/. -->
   <script>
     window.PeekingWidgetConfig = {
       autoPeek: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
       introDelayMs: 1200,
       idleWaitMinMs: 4000,
       idleWaitMaxMs: 7000,
-      heightPx: Math.min(480, Math.round(window.innerHeight * 0.62)),
-      mobileHeightPx: Math.min(360, Math.round(window.innerHeight * 0.50)),
-      topPx: Math.round(window.innerHeight * 0.18),
-      mobileTopPx: Math.round(window.innerHeight * 0.18),
+      heightPx: Math.min(620, Math.round(window.innerHeight * 0.86)),
+      mobileHeightPx: Math.min(460, Math.round(window.innerHeight * 0.72)),
+      topPx: 0,
+      mobileTopPx: 0,
       analytics: false,
-      poster: 'Hello!',
+      poster: '',
       avatar: null,
-      dialogContent: '<h2>Hello! 👋</h2><p>A little peek on a blank canvas.</p><p>Original animation by <a href="https://peeking.ybouane.com" target="_blank" rel="noopener noreferrer">ybouane</a>.</p>'
+      dialogContent: '<h2>Mark Zuckerberg</h2><p>Peeking in from the edge of a blank page.</p><p>Motion widget by <a href="https://peeking.ybouane.com" target="_blank" rel="noopener noreferrer">ybouane</a>.</p>'
     };
   </script>
   <script src="/assets/peeking-widget.js" async onerror="document.getElementById('fallback').hidden=false"></script>
