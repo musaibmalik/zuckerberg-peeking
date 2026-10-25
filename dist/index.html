@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A blank page where Mark Zuckerberg peeks in from the edge.">
+  <meta name="description" content="The original peeking animation, with Mark Zuckerberg in the same motion.">
   <title>Mark Zuckerberg Peeking</title>
   <link rel="preload" href="/assets/peeking-widget.js" as="script">
   <link rel="icon" href="data:,">
@@ -19,22 +19,22 @@
 </head>
 <body>
   <main aria-label="Blank canvas with Mark Zuckerberg peeking in"></main>
-  <!-- Same peeking widget, with the character redrawn as Mark Zuckerberg.
-       Original widget by ybouane, https://peeking.ybouane.com/. -->
+  <!-- Original animation and widget by ybouane. This local copy renders at
+       the source video's full 890 x 1340 resolution without transcoding. -->
   <script>
     window.PeekingWidgetConfig = {
       autoPeek: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
       introDelayMs: 1200,
       idleWaitMinMs: 4000,
       idleWaitMaxMs: 7000,
-      heightPx: Math.min(620, Math.round(window.innerHeight * 0.86)),
-      mobileHeightPx: Math.min(460, Math.round(window.innerHeight * 0.72)),
-      topPx: 28,
-      mobileTopPx: 16,
+      heightPx: Math.min(480, Math.round(window.innerHeight * 0.62)),
+      mobileHeightPx: Math.min(360, Math.round(window.innerHeight * 0.50)),
+      topPx: Math.round(window.innerHeight * 0.18),
+      mobileTopPx: Math.round(window.innerHeight * 0.18),
       analytics: false,
-      poster: '',
+      poster: 'Hello!',
       avatar: null,
-      dialogContent: '<h2>Mark Zuckerberg</h2><p>Peeking in from the edge of a blank page.</p><p>Motion widget by <a href="https://peeking.ybouane.com" target="_blank" rel="noopener noreferrer">ybouane</a>.</p>'
+      dialogContent: '<h2>Mark Zuckerberg</h2><p>Same peek, same wave, same sign.</p><p>Motion widget by <a href="https://peeking.ybouane.com" target="_blank" rel="noopener noreferrer">ybouane</a>.</p>'
     };
   </script>
   <script src="/assets/peeking-widget.js" async onerror="document.getElementById('fallback').hidden=false"></script>
