@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A blank page with the original peeking character animation by ybouane.">
+  <title>Peeking Animation</title>
+  <style>
+    :root { color-scheme: light; background: #fff; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #fff; }
+    body { min-height: 100svh; overflow-x: clip; }
+    main { min-height: 100svh; }
+    .fallback { position: fixed; bottom: 24px; left: 24px; right: 24px; color: #666; font: 14px/1.5 system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <main aria-label="Blank canvas with a peeking character"></main>
+  <!-- The same public widget used by liquid-glass.ybouane.com.
+       Animation and character assets are provided by ybouane. -->
+  <script>
+    window.PeekingWidgetConfig = {
+      autoPeek: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      introDelayMs: 1200,
+      idleWaitMinMs: 4000,
+      idleWaitMaxMs: 7000,
+      heightPx: 340,
+      mobileHeightPx: 250,
+      topPx: 134,
+      mobileTopPx: 100,
+      analytics: false,
+      poster: 'Hello!',
+      avatar: null,
+      dialogContent: '<h2>Hello! 👋</h2><p>A little peek on a blank canvas.</p><p>Original animation by <a href="https://peeking.ybouane.com" target="_blank" rel="noopener noreferrer">ybouane</a>.</p>'
+    };
+  </script>
+  <script src="https://peeking.ybouane.com/peeking-widget.js" async onerror="document.getElementById('fallback').hidden=false"></script>
+  <p class="fallback" id="fallback" hidden>The animation could not load. Please refresh when you are online.</p>
+</body>
+</html>
