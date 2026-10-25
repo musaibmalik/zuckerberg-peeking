@@ -10,3 +10,7 @@ Quality changes: render all canvas surfaces at the source video's 890 x 1340 res
 The initial appearance starts after 1.2 seconds. The character repeats idle peeks and responds to hover/tap. Analytics are disabled. Automatic animation is disabled when reduced motion is requested.
 
 Preview: `python3 -m http.server 8766 --directory dist`.
+
+Live demo: https://peeking-blank-demo.mosesmuse.chatgpt.site/ (private, requires owner sign-in).
+
+No build step or dependencies are required. Serve the `dist/` directory with any static web server. The `.openai/hosting.json` file identifies the existing Sites deployment.
